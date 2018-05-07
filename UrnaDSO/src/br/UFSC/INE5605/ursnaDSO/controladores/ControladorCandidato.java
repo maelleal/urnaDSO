@@ -5,6 +5,8 @@
  */
 package br.UFSC.INE5605.ursnaDSO.controladores;
 
+
+import br.UFSC.INE5605.urnaDSO.interfaces.ICandidato;
 import br.UFSC.INE5605.ursnaDSO.entidades.CARGO;
 import br.UFSC.INE5605.ursnaDSO.entidades.Candidato;
 import br.UFSC.INE5605.ursnaDSO.entidades.PartidoPolitico;
@@ -12,22 +14,35 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Ismael
+ * @author Ivo Guilherme
  */
-public class ControladorCandidato {
+public class ControladorCandidato implements ICandidato {
 
-    private ArrayList<Candidato> candidatosDep = new ArrayList<>();
-    private ArrayList<Candidato> candidatosGov = new ArrayList<>();
+    private ArrayList<Candidato>deputados;
+    private ArrayList<Candidato>governadores;
 
     public ControladorCandidato() {
+        this.deputados = new ArrayList();
+        this.governadores = new ArrayList();
     }
     
-    public void incluiCandidato (CARGO cargo, PartidoPolitico partido, int numeroCandidato, String nome){
-        Candidato candidato = new Candidato(cargo, partido, numeroCandidato, nome);
-        if (cargo.equals(CARGO.DEPUTADO)) {
-            candidatosDep.add(candidato);
-        } else if(cargo.equals(CARGO.GOVERNADOR)) {
-            candidatosGov.add(candidato);
-        }
+    public ArrayList<Candidato> getDeputados(){
+        return deputados;
     }
+    
+    public ArrayList<Candidato> getGovernadores(){
+        return governadores;
+    }
+    public Candidato incluiCandidato (CARGO cargo, PartidoPolitico partido, int numeroCandidato, String nome){
+        Candidato candidato = new Candidato(cargo, partido, numeroCandidato, nome);
+        if(!deputados.contains(candidato)) {
+            deputados.add(candidato);
+            System.out.println("Candidato a Deputado Adcicionado com Sucesso");
+            return candidato;
+        } else {
+            System.out.println("Candidato Existente");
+            return null; 
+        }        
+    }
+    
 }
