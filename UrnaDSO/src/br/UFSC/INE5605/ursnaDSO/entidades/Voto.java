@@ -13,12 +13,13 @@ public class Voto {
     
     private Candidato candidato;
     private CARGO cargo;
+ 
     
 
-    public Voto(Candidato candidato, CARGO cargo, int turno) {
+    public Voto(Candidato candidato, CARGO cargo) {
         this.candidato = candidato;
         this.cargo = cargo;
-        this.turno = turno;
+       
     }
 
     public Candidato getCandidato() {
@@ -37,13 +38,6 @@ public class Voto {
         this.cargo = cargo;
     }
 
-    public int getTurno() {
-        return turno;
-    }
-
-    public void setTurno(int turno) {
-        this.turno = turno;
-    }
     
     
     
