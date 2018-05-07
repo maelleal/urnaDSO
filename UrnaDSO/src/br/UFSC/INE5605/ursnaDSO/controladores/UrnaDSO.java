@@ -15,7 +15,8 @@ public class UrnaDSO {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        ControladorPrincipal ctrlPrincipal = new ControladorPrincipal();
+        ctrlPrincipal.exibeMenuPrincipal();
     }
     
 }
