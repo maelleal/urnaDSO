@@ -5,6 +5,8 @@
  */
 package br.UFSC.INE5605.ursnaDSO.entidades;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Ismael
@@ -12,9 +14,13 @@ package br.UFSC.INE5605.ursnaDSO.entidades;
 public class ZonaEleitoral {
     
     private int zona;
+    private ArrayList<Eleitor>eleitores;
+    private ArrayList<SecaoEleitoral>secoes;
 
     public ZonaEleitoral(int zona) {
         this.zona = zona;
+        this.eleitores = new ArrayList();
+        this.secoes = new ArrayList();
     }
 
     public int getZona() {
@@ -25,5 +31,12 @@ public class ZonaEleitoral {
         this.zona = zona;
     }
     
+    public ArrayList<Eleitor> getEleitores(){
+        return eleitores;
+    }
+    
+    public ArrayList<SecaoEleitoral> getSecoes(){
+        return secoes;
+    }
     
 }
