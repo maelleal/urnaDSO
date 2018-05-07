@@ -22,6 +22,28 @@ public class TelaPrincipal {
         this.teclado = new Scanner(System.in);
     }
     
+    public void exibeMenuPrincipal() {
+        System.out.println("==== URNA ELETRONICA ====");
+        System.out.println("");
+        System.out.println("1 - Cadastro");
+        System.out.println("2 - Votacao");
+        System.out.println("3 - Resultado");
+        System.out.println();
+        System.out.println("Escolha a opcao: ");
+        
+        int var = teclado.nextInt();
+        
+        switch(var){
+            case 1: 
+                ctrlPrincipal.iniciarCadastro();
+                break;
+            case 2: 
+                ctrlPrincipal.iniciarVotacao();
+                break;
+            case 3: 
+                ctrlPrincipal.exibeResultado();
+        }
+    }
     
     
 }
