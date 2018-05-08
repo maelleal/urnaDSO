@@ -30,5 +30,15 @@ public class TelaCandidato {
     public void candidatoExistente() {
         System.out.println("Candidato Existente");
     }
+    public void excluiDeputado () {
+        System.out.println("Candidato a Deputado Excluído com Sucesso");
+    }
+    public void excluiGovernador () {
+        System.out.println("Candidato a Governador Excluído com Sucesso");
+    }
+    public void candidatoInexistente() {
+        System.out.println("Candidato Inexistente");
+    }
+    
     
 }
