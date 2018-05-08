@@ -6,6 +6,7 @@
 package br.UFSC.INE5605.urnaDSO.telas;
 
 import br.UFSC.INE5605.urnaDSO.controladores.ControladorCandidato;
+import br.UFSC.INE5605.urnaDSO.entidades.Candidato;
 import java.util.Scanner;
 
 /**
@@ -38,6 +39,10 @@ public class TelaCandidato {
     }
     public void candidatoInexistente() {
         System.out.println("Candidato Inexistente");
+    }
+
+    public void exibeCandidato(Candidato candidato) {
+        System.out.println("Candidato: "+ candidato.getNome());
     }
     
     

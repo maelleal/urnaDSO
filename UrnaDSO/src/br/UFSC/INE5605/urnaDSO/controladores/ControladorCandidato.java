@@ -69,6 +69,14 @@ public class ControladorCandidato implements ICandidato {
         }
     }
     
-    
+    public Candidato encontraDeputadoPeloNumero (int numeroCandidato){
+        for (int i = 1; i < deputados.size(); i++) {
+            Candidato candidato = deputados.get(i);
+            if (numeroCandidato == candidato.getNumeroCandidato()) {
+                return candidato;
+            } 
+        }
+        return null;
+    }
     
 }
