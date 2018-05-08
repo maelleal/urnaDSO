@@ -12,11 +12,12 @@ package br.UFSC.INE5605.urnaDSO.entidades;
 public class SecaoEleitoral {
     
     private int secao;
-    private ZonaEleitoral zona;
+    private Urna urna;
 
-    public SecaoEleitoral(int secao, ZonaEleitoral zona) {
+    public SecaoEleitoral(int secao, Urna urna) {
         this.secao = secao;
-        this.zona = zona;
+        this.urna = new Urna(this);
+        
     }
 
     public int getSecao() {
@@ -27,12 +28,12 @@ public class SecaoEleitoral {
         this.secao = secao;
     }
 
-    public ZonaEleitoral getZona() {
-        return zona;
+    public Urna getUrna() {
+        return urna;
     }
 
-    public void setZona(ZonaEleitoral zona) {
-        this.zona = zona;
+    public void setUrna(Urna urna) {
+        this.urna = urna;
     }
     
     

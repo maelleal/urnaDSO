@@ -11,22 +11,16 @@ package br.UFSC.INE5605.urnaDSO.entidades;
  */
 public class Urna {
     
-    private int urna;
     private SecaoEleitoral secao;
-    private ZonaEleitoral zona;
+    private static int numeroUrna;
 
-    public Urna(int urna, SecaoEleitoral secao, ZonaEleitoral zona) {
-        this.urna = urna;
+    public Urna(SecaoEleitoral secao) {
         this.secao = secao;
-        this.zona = zona;
-    }
-
-    public int getUrna() {
-        return urna;
-    }
-
-    public void setUrna(int urna) {
-        this.urna = urna;
+        Urna.numeroUrna++;
+        this.numeroUrna = Urna.numeroUrna;
+        
+        
+        
     }
 
     public SecaoEleitoral getSecao() {
@@ -35,16 +29,6 @@ public class Urna {
 
     public void setSecao(SecaoEleitoral secao) {
         this.secao = secao;
-    }
-
-    public ZonaEleitoral getZona() {
-        return zona;
-    }
-
-    public void setZona(ZonaEleitoral zona) {
-        this.zona = zona;
-    }
-    
-    
+    }   
     
 }
