@@ -3,19 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.UFSC.INE5605.urnaDSO.interfaces;
-
-import br.UFSC.INE5605.urnaDSO.entidades.Candidato;
-import java.util.ArrayList;
+package br.UFSC.INE5605.urnaDSO.entidades;
 
 /**
  *
- * @author Ivo Guilherme
+ * @author rodri
  */
-public interface ICandidato {
+public interface IEleitor {
     
-    public ArrayList<Candidato>candidatos;
+    public void cadastraEleitor(Eleitor e);
     
+    public void excluirEleitor(Eleitor e);
+    
+    public void exibeEleitores();   
     
     
 }
