@@ -5,6 +5,8 @@
  */
 package br.UFSC.INE5605.urnaDSO.entidades;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Ismael
@@ -13,10 +15,12 @@ public class SecaoEleitoral {
     
     private int secao;
     private Urna urna;
+    private ArrayList<Eleitor> eleitores;
 
     public SecaoEleitoral(int secao, Urna urna) {
         this.secao = secao;
         this.urna = new Urna(this);
+        this.eleitores = new ArrayList();
         
     }
 
@@ -35,6 +39,12 @@ public class SecaoEleitoral {
     public void setUrna(Urna urna) {
         this.urna = urna;
     }
+
+    public ArrayList<Eleitor> getEleitores() {
+        return eleitores;
+    }
+    
+    
     
     
 }

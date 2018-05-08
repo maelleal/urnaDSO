@@ -18,8 +18,7 @@ public class Urna {
         this.secao = secao;
         Urna.numeroUrna++;
         this.numeroUrna = Urna.numeroUrna;
-        
-        
+               
         
     }
 

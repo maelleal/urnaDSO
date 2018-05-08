@@ -14,12 +14,10 @@ import java.util.ArrayList;
 public class ZonaEleitoral {
     
     private int zona;
-    private ArrayList<Eleitor>eleitores;
     private ArrayList<SecaoEleitoral>secoes;
 
     public ZonaEleitoral(int zona) {
-        this.zona = zona;
-        this.eleitores = new ArrayList();
+        this.zona = zona;        
         this.secoes = new ArrayList();
     }
 
@@ -30,11 +28,7 @@ public class ZonaEleitoral {
     public void setZona(int zona) {
         this.zona = zona;
     }
-    
-    public ArrayList<Eleitor> getEleitores(){
-        return eleitores;
-    }
-    
+        
     public ArrayList<SecaoEleitoral> getSecoes(){
         return secoes;
     }
