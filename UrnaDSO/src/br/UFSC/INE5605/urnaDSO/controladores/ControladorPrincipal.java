@@ -15,9 +15,11 @@ import br.UFSC.INE5605.urnaDSO.telas.TelaPrincipal;
 public class ControladorPrincipal {
     
     private TelaPrincipal telaPrincipal;
+    private ControladorCadastro ctrlCadastro;
 
     public ControladorPrincipal() {
         this.telaPrincipal = new TelaPrincipal(this);
+        this.ctrlCadastro = new ControladorCadastro(this);
         
     }
     

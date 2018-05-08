@@ -7,7 +7,7 @@ package br.UFSC.INE5605.urnaDSO.telas;
 
 import br.UFSC.INE5605.urnaDSO.controladores.ControladorEleitor;
 import br.UFSC.INE5605.urnaDSO.entidades.Eleitor;
-import br.UFSC.INE5605.urnaDSO.entidades.IEleitor;
+import br.UFSC.INE5605.urnaDSO.interfaces.IEleitor;
 import java.util.Scanner;
 
 /**
