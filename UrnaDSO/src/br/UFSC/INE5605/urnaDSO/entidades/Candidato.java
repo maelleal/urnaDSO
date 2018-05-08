@@ -12,11 +12,11 @@ package br.UFSC.INE5605.urnaDSO.entidades;
 public class Candidato extends Pessoa {
     
     
-    private CARGO cargo;
+    private Cargo cargo;
     private PartidoPolitico partido;
     private int numeroCandidato;
 
-    public Candidato(CARGO cargo, PartidoPolitico partido, int numeroCandidato, String nome) {
+    public Candidato(Cargo cargo, PartidoPolitico partido, int numeroCandidato, String nome) {
         super(nome);
         this.cargo = cargo;
         this.partido = partido;
@@ -24,11 +24,11 @@ public class Candidato extends Pessoa {
     }
 
 
-    public CARGO getCargo() {
+    public Cargo getCargo() {
         return cargo;
     }
 
-    public void setCargo(CARGO cargo) {
+    public void setCargo(Cargo cargo) {
         this.cargo = cargo;
     }
 

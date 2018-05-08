@@ -5,7 +5,18 @@
  */
 package br.UFSC.INE5605.urnaDSO.controladores;
 
-import br.UFSC.INE5605.urnaDSO.entidades.Eleitor;
+import br.UFSC.INE5605.urnaDSO.interfaces.ICandidato;
+import br.UFSC.INE5605.urnaDSO.telas.TelaUrna;
+import br.UFSC.INE5605.ursnaDSO.entidades.CARGO;
+import br.UFSC.INE5605.ursnaDSO.entidades.Candidato;
+import br.UFSC.INE5605.ursnaDSO.entidades.Cidade;
+import br.UFSC.INE5605.ursnaDSO.entidades.Eleitor;
+import br.UFSC.INE5605.ursnaDSO.entidades.PartidoPolitico;
+import br.UFSC.INE5605.ursnaDSO.entidades.SecaoEleitoral;
+import br.UFSC.INE5605.ursnaDSO.entidades.Urna;
+import br.UFSC.INE5605.ursnaDSO.entidades.Voto;
+import br.UFSC.INE5605.ursnaDSO.entidades.ZonaEleitoral;
+import java.util.ArrayList;
 
 /**
  *
@@ -13,17 +24,43 @@ import br.UFSC.INE5605.urnaDSO.entidades.Eleitor;
  */
 public class ControladorUrna {
     
-    public void votar (int tituloEleitoral){
+    private TelaUrna telaUrna;
+    private ArrayList<Voto>listaVotosDeputados;
+    private ArrayList<Voto>listaVotosGovernadores;
+    private ArrayList<Urna>urnas;
+
+    public ControladorUrna() {
+        this.telaUrna =  new TelaUrna();
+        this.listaVotosDeputados = new ArrayList();
+        this.listaVotosDeputados = new ArrayList();
+        this.urnas = new ArrayList();
+    }
+    
+    
+    
+    
+    public void votar (Voto voto){
+        Voto voto = new Voto();
         //verifica se o eleitor já votou
-        Eleitor eleitor = new Eleitor(tituloEleitoral, secaoEleitoral, nome);
-        if(!eleitor.jaVotou())) {
-//??        incluiVotoDeputado;
-//??        incluiVotoGovernador;
-            System.out.println("Voto realizado com sucesso");
+        Eleitor eleitor = new Eleitor(tituloEleitoral);
+        if(!eleitor.getJaVotou()) {
+        
+        ControladorUrna.this.incluiVotoGovernador();
+            telaUrna.votoRealizado();
+            eleitor.setJaVotou(true);
         } else {
-             System.out.println("Eleitor Já votou");
+            telaUrna.eleitorJaVotou();
         }
               
+    }
+    
+    public void adicionaVotoDeputado (int op) {
+        if (op == 1) {
+        //adiciona voto
+        this.listaVotosDeputados.add(voto);
+        } else if (op == 2){
+            op = 0;  
+        }
     }
     
         
@@ -35,41 +72,13 @@ public class ControladorUrna {
             if(ControladorCandidato.encontraCandidatoPeloNumero(numeroCandidatoDeputado)){
                 //verifica se o cargoo está correto
                 if(ControladorCandidato.verificaCargoDeputado(numeroCandidatoDeputado)) {
-                    System.out.println("Candidato "+ candidato.getNomeCandidato);
-                    System.out.println("1 - Confirma");
-                    System.out.println("2 - Corrige");
-//??                   op = TelaUrna.nextInt();
-                    if (op == 1) {
-                        //adiciona voto
-                        listaVotosDeputado.add(voto);
-                    } else if (op == 2){
-                        op = 0;
-                    }
+                    telaUrna.confirmaCandidato(candidato);
+                    
                 } else {
-                    System.out.println("Candidato "+ candidato.getNomeCandidato);
-                    System.out.println("1 - Confirma");
-                    System.out.println("2 - Corrige");
-//??                   op = TelaUrna.nextInt();
-                    if (op == 1) {
-                        //adiciona voto nulo
-                        numeroCandidatoDeputado = 99;
-                        listaVotosDeputado.add(voto);
-                    } else if (op == 2){
-                        op = 0;
-                    }
+                    telaUrna.confirmaCandidato(candidato);
                 } 
             } else {
-                System.out.println("Candidato "+ candidato.getNomeCandidato);
-                    System.out.println("1 - Confirma");
-                    System.out.println("2 - Corrige");
-//??                   op = TelaUrna.nextInt();
-                    if (op == 1) {
-                        //adiciona voto nulo
-                        numeroCandidatoDeputado = 99;
-                        listaVotosDeputado.add(voto);
-                    } else if (op == 2){
-                        op = 0;
-                    }
+                telaUrna.confirmaCandidato(candidato);
             }
             
         }

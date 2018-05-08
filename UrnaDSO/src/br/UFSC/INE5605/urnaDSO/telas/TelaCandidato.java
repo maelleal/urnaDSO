@@ -5,6 +5,7 @@
  */
 package br.UFSC.INE5605.urnaDSO.telas;
 
+import br.UFSC.INE5605.urnaDSO.controladores.ControladorCandidato;
 import java.util.Scanner;
 
 /**
@@ -13,9 +14,21 @@ import java.util.Scanner;
  */
 public class TelaCandidato {
     private Scanner teclado;
+    private ControladorCandidato ctrlCandidato;
     
-    public TelaCandidato (Scanner teclado){
-        this.teclado = teclado;
+    public TelaCandidato (){
+        this.teclado = new Scanner(System.in);
+        ControladorCandidato ctrlCandidato = new ControladorCandidato();
+    }
+    
+    public void adicionaDeputado () {
+        System.out.println("Candidato a Deputado Adcicionado com Sucesso");
+    }
+    public void adicionaGovernador () {
+        System.out.println("Candidato a Governador Adcicionado com Sucesso");
+    }
+    public void candidatoExistente() {
+        System.out.println("Candidato Existente");
     }
     
 }

@@ -19,6 +19,7 @@ public class Eleitor extends Pessoa {
         super(nome);
         this.tituloEleitoral = tituloEleitoral;
         this.secaoEleitoral = secaoEleitoral;
+        this.jaVotou = false;
     }
 
     public boolean getJaVotou() {

@@ -7,9 +7,10 @@ package br.UFSC.INE5605.urnaDSO.controladores;
 
 
 import br.UFSC.INE5605.urnaDSO.interfaces.ICandidato;
-import br.UFSC.INE5605.urnaDSO.entidades.CARGO;
+import br.UFSC.INE5605.urnaDSO.entidades.Cargo;
 import br.UFSC.INE5605.urnaDSO.entidades.Candidato;
 import br.UFSC.INE5605.urnaDSO.entidades.PartidoPolitico;
+import br.UFSC.INE5605.urnaDSO.telas.TelaCandidato;
 import java.util.ArrayList;
 
 /**
@@ -17,13 +18,14 @@ import java.util.ArrayList;
  * @author Ivo Guilherme
  */
 public class ControladorCandidato implements ICandidato {
-
+    private TelaCandidato telaCandidato;
     private ArrayList<Candidato>deputados;
     private ArrayList<Candidato>governadores;
 
     public ControladorCandidato() {
         this.deputados = new ArrayList();
         this.governadores = new ArrayList();
+        this.telaCandidato = new TelaCandidato();
     }
     
     public ArrayList<Candidato> getDeputados(){
@@ -33,14 +35,23 @@ public class ControladorCandidato implements ICandidato {
     public ArrayList<Candidato> getGovernadores(){
         return governadores;
     }
-    public Candidato incluiCandidato (CARGO cargo, PartidoPolitico partido, int numeroCandidato, String nome){
+    public Candidato incluiCandidato (Cargo cargo, PartidoPolitico partido, int numeroCandidato, String nome){
         Candidato candidato = new Candidato(cargo, partido, numeroCandidato, nome);
-        if(!deputados.contains(candidato)) {
-            deputados.add(candidato);
-            System.out.println("Candidato a Deputado Adcicionado com Sucesso");
-            return candidato;
+        if (cargo == cargo.DEPUTADO) {
+            if(!deputados.contains(candidato)) {
+                deputados.add(candidato);
+                telaCandidato.adicionaDeputado();
+                return candidato;
+            } else {
+            telaCandidato.candidatoExistente();
+            return null; 
         } else {
-            System.out.println("Candidato Existente");
+            if(!governadores.contains(candidato)) {
+            governadores.add(candidato);
+           telaCandidato.adicionaGovernador();
+            return candidato;
+            }
+            telaCandidato.candidatoExistente();
             return null; 
         }        
     }
