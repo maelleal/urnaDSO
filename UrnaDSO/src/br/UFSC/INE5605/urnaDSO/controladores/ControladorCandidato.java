@@ -43,8 +43,9 @@ public class ControladorCandidato implements ICandidato {
                 telaCandidato.adicionaDeputado();
                 return candidato;
             } else {
-            telaCandidato.candidatoExistente();
-            return null; 
+                telaCandidato.candidatoExistente();
+                return null; 
+            }
         } else {
             if(!governadores.contains(candidato)) {
             governadores.add(candidato);
@@ -55,5 +56,19 @@ public class ControladorCandidato implements ICandidato {
             return null; 
         }        
     }
+    public void excluiCandidato (Candidato candidato){
+        candidato.getNome();
+        if(deputados.contains(this)){
+            deputados.remove(this);
+            telaCandidato.excluiDeputado();            
+        } else if(governadores.contains(this)) {
+            governadores.remove(this);
+            telaCandidato.excluiGovernador();
+        } else {
+            telaCandidato.candidatoInexistente();
+        }
+    }
+    
+    
     
 }
