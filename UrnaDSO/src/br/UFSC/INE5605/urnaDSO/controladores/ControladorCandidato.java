@@ -17,15 +17,19 @@ import java.util.ArrayList;
  *
  * @author Ivo Guilherme
  */
-public class ControladorCandidato implements ICandidato {
+public class ControladorCandidato{
     private TelaCandidato telaCandidato;
     private ArrayList<Candidato>deputados;
     private ArrayList<Candidato>governadores;
+    private ControladorCadastro ctrlCadastro;
+   
 
-    public ControladorCandidato() {
+    public ControladorCandidato(ControladorCadastro ctrlCadastro) {
         this.deputados = new ArrayList();
         this.governadores = new ArrayList();
-        this.telaCandidato = new TelaCandidato();
+        this.telaCandidato = new TelaCandidato(this);
+        this.ctrlCadastro = ctrlCadastro;
+    
     }
     
     public ArrayList<Candidato> getDeputados(){
@@ -40,7 +44,7 @@ public class ControladorCandidato implements ICandidato {
         if (cargo == cargo.DEPUTADO) {
             if(!deputados.contains(candidato)) {
                 deputados.add(candidato);
-                telaCandidato.adicionaDeputado();
+                telaCandidato.incluiDeputado();
                 return candidato;
             } else {
                 telaCandidato.candidatoExistente();
@@ -49,7 +53,7 @@ public class ControladorCandidato implements ICandidato {
         } else {
             if(!governadores.contains(candidato)) {
             governadores.add(candidato);
-           telaCandidato.adicionaGovernador();
+           telaCandidato.incluiGovernador();
             return candidato;
             }
             telaCandidato.candidatoExistente();
@@ -77,6 +81,10 @@ public class ControladorCandidato implements ICandidato {
             } 
         }
         return null;
+    }
+
+    void incluiCandidato() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
