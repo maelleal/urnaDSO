@@ -39,10 +39,10 @@ public class ControladorCandidato{
     public ArrayList<Candidato> getGovernadores(){
         return governadores;
     }
-    *public Candidato incluiCandidato (CARGO cargo, PartidoPolitico partido, int numeroCandidato, String nome){
+    public Candidato incluiCandidato (){
         Candidato candidato = new Candidato(candidato.getCargo(), candidato.getPartido(), 
                 candidato.getNumeroCandidato(), candidato.getNome());
-        if (cargo == cargo.DEPUTADO) {
+        if (candidato.getCargo(CARGO.DEPUTADO)) {
             if(!deputados.contains(candidato)) {
                 deputados.add(candidato);
                 telaCandidato.incluiDeputado();
@@ -84,8 +84,6 @@ public class ControladorCandidato{
         return null;
     }
 
-    void incluiCandidato() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
     
 }
