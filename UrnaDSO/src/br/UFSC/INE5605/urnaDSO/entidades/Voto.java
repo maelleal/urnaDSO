@@ -22,6 +22,10 @@ public class Voto {
        
     }
 
+    public Voto() {
+        
+    }
+
     public Candidato getCandidato() {
         return candidato;
     }

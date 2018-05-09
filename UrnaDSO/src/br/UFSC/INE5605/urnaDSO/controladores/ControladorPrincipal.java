@@ -23,20 +23,29 @@ public class ControladorPrincipal {
         
     }
     
-    public void exibeMenuPrincipal(){
+    public void inicializa() {
         telaPrincipal.exibeMenuPrincipal();
     }
     
+    public void executaOpcao(int opcao) {
+        if (opcao == 1) {
+           ctrlCadastro.iniciarCadastro();
+        }
+        
+        
+    }
+}   
+/*
     public void iniciarCadastro(){
         
     }
     
     public void iniciarVotacao() {
         
-        
     }
     
-    public void exibeResultado() {
+    /*public void exibeResultado() {
         
     }
 }
+*/

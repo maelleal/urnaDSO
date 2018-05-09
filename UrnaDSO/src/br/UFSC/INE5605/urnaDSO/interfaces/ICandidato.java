@@ -6,6 +6,8 @@
 package br.UFSC.INE5605.urnaDSO.interfaces;
 
 import br.UFSC.INE5605.urnaDSO.entidades.Candidato;
+import br.UFSC.INE5605.urnaDSO.entidades.Cargo;
+import br.UFSC.INE5605.urnaDSO.entidades.PartidoPolitico;
 import java.util.ArrayList;
 
 /**
@@ -14,8 +16,7 @@ import java.util.ArrayList;
  */
 public interface ICandidato {
     
-    public ArrayList<Candidato>candidatos;
-    
-    
-    
+    public Cargo getCargo();
+    public PartidoPolitico getPartido();
+    public int  getNumeroCandidato();
 }

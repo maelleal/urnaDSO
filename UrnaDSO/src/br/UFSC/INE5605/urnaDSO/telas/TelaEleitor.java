@@ -14,18 +14,18 @@ import java.util.Scanner;
  *
  * @author Ismael
  */
-public class TelaEleitor implements IEleitor {
+public class TelaEleitor {
     
     private Scanner teclado;
     private ControladorEleitor ctrlEleitor;
     
-    public TelaEleitor (){
+    public TelaEleitor (ControladorEleitor ctrlEleitor){
         this.teclado = new Scanner(System.in);
-        this.ctrlEleitor = new ControladorEleitor();
+        this.ctrlEleitor = ctrlEleitor;
     }
 
-    @Override
-    public void cadastraEleitor(Eleitor e) {
+   
+    public void exibeMenuEleitores() {
         System.out.println("==== Cadastro de Eleitor ===="); 
         System.out.println(""); 
         System.out.println("Preencha os dados a seguir"); 
@@ -38,12 +38,12 @@ public class TelaEleitor implements IEleitor {
         int secaoEleitoral = teclado.nextInt();
     }
 
-    @Override
+  
     public void excluirEleitor(Eleitor e) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
+ 
     public void exibeEleitores() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }

@@ -13,7 +13,7 @@ import br.UFSC.INE5605.urnaDSO.entidades.Eleitor;
  */
 public interface IEleitor {
     
-    public void cadastraEleitor(Eleitor e);
+    public void incluiEleitor(Eleitor e);
     
     public void excluirEleitor(Eleitor e);
     

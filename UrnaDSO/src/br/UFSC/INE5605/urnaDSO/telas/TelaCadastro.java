@@ -23,6 +23,21 @@ public class TelaCadastro {
         
     }
     
+    public void exibeMenuCadastro(){
+       System.out.println("---- Cadastro da Urna ----");
+       System.out.println("");
+       System.out.println("4 - Cadastra Eleitores");
+       System.out.println("5 - Cadastra Candidatos");
+       System.out.println();
+       System.out.println("Escolha a opcao: ");
+    
+    
+    int opcaoCadastro = teclado.nextInt();
+    
+    ctrlCadastro.executaOpcaoCadastro(opcaoCadastro);
+    
+    }
+    
     
     
 }

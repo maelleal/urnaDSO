@@ -5,6 +5,7 @@
  */
 package br.UFSC.INE5605.urnaDSO.controladores;
 
+import br.UFSC.INE5605.urnaDSO.entidades.Cidade;
 import br.UFSC.INE5605.urnaDSO.telas.TelaCadastro;
 
 /**
@@ -15,11 +16,28 @@ public class ControladorCadastro {
     
     private TelaCadastro telaCadastro;
     private ControladorPrincipal ctrlPrincipal;
+    private ControladorEleitor ctrlEleitor;
+    private ControladorCandidato ctrlCandidato;
 
     public ControladorCadastro(ControladorPrincipal ctrlPrincipal) {
         this.ctrlPrincipal = ctrlPrincipal;
+        this.telaCadastro = new TelaCadastro(this);
+       
     }
     
+    public void iniciarCadastro() {
+        telaCadastro.exibeMenuCadastro();
+        
+    }
     
-    
+    public void executaOpcaoCadastro(int opcaoCadastro){
+        if (opcaoCadastro == 4) {
+           ctrlEleitor.incluiEleitor();
+        }
+        if (opcaoCadastro == 5) {
+           ctrlCandidato.incluiCandidato();
+        }
+        
+    }
+     
 }

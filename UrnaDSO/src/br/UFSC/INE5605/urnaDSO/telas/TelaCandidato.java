@@ -17,15 +17,15 @@ public class TelaCandidato {
     private Scanner teclado;
     private ControladorCandidato ctrlCandidato;
     
-    public TelaCandidato (){
+    public TelaCandidato (ControladorCandidato ctrlCandidato){
         this.teclado = new Scanner(System.in);
-        ControladorCandidato ctrlCandidato = new ControladorCandidato();
+        this.ctrlCandidato = ctrlCandidato;
     }
     
-    public void adicionaDeputado () {
+    public void incluiDeputado () {
         System.out.println("Candidato a Deputado Adcicionado com Sucesso");
     }
-    public void adicionaGovernador () {
+    public void incluiGovernador () {
         System.out.println("Candidato a Governador Adcicionado com Sucesso");
     }
     public void candidatoExistente() {

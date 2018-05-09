@@ -17,10 +17,13 @@ public class ControladorEleitor {
 
     private ArrayList<Eleitor> eleitores;
     private TelaEleitor telaEleitor;
+    private ControladorCadastro ctrlCadastro;
+   
 
-    public ControladorEleitor() {
+    public ControladorEleitor(ControladorCadastro ctrlCadastro) {
         this.eleitores = new ArrayList();
-        this.telaEleitor = new TelaEleitor();
+        this.telaEleitor = new TelaEleitor(this);
+        this.ctrlCadastro = ctrlCadastro;
     }
     
     
@@ -38,8 +41,8 @@ public class ControladorEleitor {
     }
     
     
-    public void incluiEleitor(Eleitor e){
-        this.eleitores.add(e);//TODO tratar exceções
+    public void incluiEleitor(){
+        telaEleitor.exibeMenuEleitores();
     }
     
     public void excluirEleitor(Eleitor e){
@@ -49,5 +52,7 @@ public class ControladorEleitor {
     public void exibeEleitores(){
         
     }
+
+    
     
 }

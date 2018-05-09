@@ -31,6 +31,12 @@ public class TelaPrincipal {
         System.out.println();
         System.out.println("Escolha a opcao: ");
         
+        int opcao = teclado.nextInt();
+        
+        ctrlPrincipal.executaOpcao(opcao);
+    }
+}
+        /*
         int var = teclado.nextInt();
         
         switch(var){
@@ -47,3 +53,4 @@ public class TelaPrincipal {
     
     
 }
+*/
