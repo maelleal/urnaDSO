@@ -7,7 +7,7 @@ package br.UFSC.INE5605.urnaDSO.controladores;
 
 
 import br.UFSC.INE5605.urnaDSO.interfaces.ICandidato;
-import br.UFSC.INE5605.urnaDSO.entidades.Cargo;
+import br.UFSC.INE5605.urnaDSO.entidades.CARGO;
 import br.UFSC.INE5605.urnaDSO.entidades.Candidato;
 import br.UFSC.INE5605.urnaDSO.entidades.PartidoPolitico;
 import br.UFSC.INE5605.urnaDSO.telas.TelaCandidato;
@@ -39,8 +39,9 @@ public class ControladorCandidato{
     public ArrayList<Candidato> getGovernadores(){
         return governadores;
     }
-    public Candidato incluiCandidato (Cargo cargo, PartidoPolitico partido, int numeroCandidato, String nome){
-        Candidato candidato = new Candidato(cargo, partido, numeroCandidato, nome);
+    *public Candidato incluiCandidato (CARGO cargo, PartidoPolitico partido, int numeroCandidato, String nome){
+        Candidato candidato = new Candidato(candidato.getCargo(), candidato.getPartido(), 
+                candidato.getNumeroCandidato(), candidato.getNome());
         if (cargo == cargo.DEPUTADO) {
             if(!deputados.contains(candidato)) {
                 deputados.add(candidato);
@@ -62,11 +63,11 @@ public class ControladorCandidato{
     }
     public void excluiCandidato (Candidato candidato){
         candidato.getNome();
-        if(deputados.contains(this)){
-            deputados.remove(this);
+        if(deputados.contains(candidato)){
+            deputados.remove(candidato);
             telaCandidato.excluiDeputado();            
-        } else if(governadores.contains(this)) {
-            governadores.remove(this);
+        } else if(governadores.contains(candidato)) {
+            governadores.remove(candidato);
             telaCandidato.excluiGovernador();
         } else {
             telaCandidato.candidatoInexistente();

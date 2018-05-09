@@ -4,7 +4,11 @@
  * and open the template in the editor.
  */
 package br.UFSC.INE5605.urnaDSO.entidades;
-
+import br.UFSC.INE5605.urnaDSO.interfaces.ICandidato;
+import br.UFSC.INE5605.urnaDSO.entidades.CARGO;
+import br.UFSC.INE5605.urnaDSO.entidades.Candidato;
+import br.UFSC.INE5605.urnaDSO.entidades.PartidoPolitico;
+import br.UFSC.INE5605.urnaDSO.telas.TelaCandidato;
 /**
  *
  * @author Ismael
@@ -12,11 +16,11 @@ package br.UFSC.INE5605.urnaDSO.entidades;
 public class Candidato extends Pessoa {
     
     
-    private Cargo cargo;
+    private CARGO cargo;
     private PartidoPolitico partido;
     private int numeroCandidato;
 
-    public Candidato(Cargo cargo, PartidoPolitico partido, int numeroCandidato, String nome) {
+    public Candidato(CARGO cargo, PartidoPolitico partido, int numeroCandidato, String nome) {
         super(nome);
         this.cargo = cargo;
         this.partido = partido;
@@ -24,11 +28,11 @@ public class Candidato extends Pessoa {
     }
 
 
-    public Cargo getCargo() {
+    public CARGO getCargo() {
         return cargo;
     }
 
-    public void setCargo(Cargo cargo) {
+    public void setCargo(CARGO cargo) {
         this.cargo = cargo;
     }
 
