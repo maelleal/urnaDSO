@@ -35,7 +35,9 @@ public class TelaPartido {
     public void partidoInexistente() {
         System.out.println("Partido Inexistente");
     }
-    
+    public void partidoTeste() {
+        System.out.println("Partido Inexistente");
+    }
     
     
     
