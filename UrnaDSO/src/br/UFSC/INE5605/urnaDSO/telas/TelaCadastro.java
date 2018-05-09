@@ -28,6 +28,7 @@ public class TelaCadastro {
        System.out.println("");
        System.out.println("4 - Cadastra Eleitores");
        System.out.println("5 - Cadastra Candidatos");
+       System.out.println("6 - Cadastra Partido");
        System.out.println();
        System.out.println("Escolha a opcao: ");
     
