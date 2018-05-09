@@ -5,7 +5,7 @@
  */
 package br.UFSC.INE5605.urnaDSO.controladores;
 
-import br.UFSC.INE5605.urnaDSO.entidades.CARGO;
+import br.UFSC.INE5605.urnaDSO.entidades.Cargo;
 import br.UFSC.INE5605.urnaDSO.entidades.Candidato;
 import br.UFSC.INE5605.urnaDSO.entidades.Cargo;
 import br.UFSC.INE5605.urnaDSO.entidades.PartidoPolitico;
@@ -21,8 +21,11 @@ public class UrnaDSO {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        ControladorPrincipal ctrlPrincipal = new ControladorPrincipal();
-        ctrlPrincipal.exibeMenuPrincipal();
+        
+        ControladorPrincipal ctrlPrincipal; 
+        ctrlPrincipal = new ControladorPrincipal();
+        ctrlPrincipal.inicializa();
+    
     }
     
     
