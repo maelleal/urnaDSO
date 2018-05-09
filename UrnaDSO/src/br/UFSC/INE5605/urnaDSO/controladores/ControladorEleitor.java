@@ -6,6 +6,7 @@
 package br.UFSC.INE5605.urnaDSO.controladores;
 
 import br.UFSC.INE5605.urnaDSO.entidades.Eleitor;
+import br.UFSC.INE5605.urnaDSO.entidades.SecaoEleitoral;
 import br.UFSC.INE5605.urnaDSO.telas.TelaEleitor;
 import java.util.ArrayList;
 
@@ -18,19 +19,21 @@ public class ControladorEleitor {
     private ArrayList<Eleitor> eleitores;
     private TelaEleitor telaEleitor;
     private ControladorCadastro ctrlCadastro;
+    private ArrayList<SecaoEleitoral>secoes;
    
 
     public ControladorEleitor(ControladorCadastro ctrlCadastro) {
         this.eleitores = new ArrayList();
         this.telaEleitor = new TelaEleitor(this);
         this.ctrlCadastro = ctrlCadastro;
+        this.secoes = new ArrayList();
     }
     
     
     
     //public void editaEleitor(Eleitor e)
     
-    public Eleitor findEleitorByTitulo(int titulo){
+    public Eleitor encontraEleitorPorTitulo(int titulo){
         Eleitor a = null;
         for(Eleitor e : eleitores){
             if(e.getTituloEleitoral() == titulo){
@@ -40,9 +43,30 @@ public class ControladorEleitor {
         return a;
     }
     
+    public SecaoEleitoral encontraSecaoPorNumero(int secaoEleitoral){
+        SecaoEleitoral a = null;
+        for(SecaoEleitoral s : secoes){
+            if(s.getSecao() == secaoEleitoral){
+                a = s;
+            }      
+        }
+        return a;
+    }
     
-    public void incluiEleitor(){
+    
+    public void exibeMenuEleitores(){
         telaEleitor.exibeMenuEleitores();
+    }
+    
+    public void cadastraEleitor(int tituloEleitoral, int secaoEleitoral, String nome, String cidade){
+        SecaoEleitoral secao = this.encontraSecaoPorNumero(secaoEleitoral);
+        
+        Eleitor eleitor = new Eleitor(tituloEleitoral, secao, nome, cidade);
+    }
+    
+    
+    public void incluiEleitor(Eleitor e){
+        eleitores.add(e);// TODO tratar exceções
     }
     
     public void excluirEleitor(Eleitor e){

@@ -13,13 +13,15 @@ public class Eleitor extends Pessoa {
     
     private int tituloEleitoral;
     private SecaoEleitoral secaoEleitoral;
+    private String cidade;
     public boolean jaVotou;
 
-    public Eleitor(int tituloEleitoral, SecaoEleitoral secaoEleitoral, String nome) {
+    public Eleitor(int tituloEleitoral, SecaoEleitoral secaoEleitoral, String nome, String cidade) {
         super(nome);
         this.tituloEleitoral = tituloEleitoral;
         this.secaoEleitoral = secaoEleitoral;
         this.jaVotou = false;
+        this.cidade = cidade;
     }
 
     public boolean getJaVotou() {

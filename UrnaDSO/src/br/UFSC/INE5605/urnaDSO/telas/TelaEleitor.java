@@ -32,10 +32,14 @@ public class TelaEleitor {
         System.out.println(""); 
         System.out.println("Nome do eleitor: ");
         String nome = teclado.next();
+        System.out.println("Cidade: ");
+        String cidade = teclado.next();
         System.out.println("Numero do titulo de eleitor: ");
         int tituloEleitoral = teclado.nextInt();
         System.out.println("Numero da secao: ");
         int secaoEleitoral = teclado.nextInt();
+        
+        ctrlEleitor.cadastraEleitor(tituloEleitoral, secaoEleitoral, nome, cidade);
     }
 
   

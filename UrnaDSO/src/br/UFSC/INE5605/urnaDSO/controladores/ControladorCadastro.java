@@ -34,7 +34,7 @@ public class ControladorCadastro {
     
     public void executaOpcaoCadastro(int opcaoCadastro){
         if (opcaoCadastro == 4) {
-           ctrlEleitor.incluiEleitor();
+           ctrlEleitor.exibeMenuEleitores();
         }
         if (opcaoCadastro == 5) {
            ctrlCandidato.incluiCandidato();
