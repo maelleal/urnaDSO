@@ -7,7 +7,7 @@ package br.UFSC.INE5605.urnaDSO.controladores;
 
 
 import br.UFSC.INE5605.urnaDSO.interfaces.ICandidato;
-import br.UFSC.INE5605.urnaDSO.entidades.CARGO;
+import br.UFSC.INE5605.urnaDSO.entidades.Cargo;
 import br.UFSC.INE5605.urnaDSO.entidades.Candidato;
 import br.UFSC.INE5605.urnaDSO.entidades.PartidoPolitico;
 import br.UFSC.INE5605.urnaDSO.telas.TelaCandidato;
