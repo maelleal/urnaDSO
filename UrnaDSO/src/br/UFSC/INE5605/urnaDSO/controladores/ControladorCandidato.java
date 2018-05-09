@@ -39,23 +39,33 @@ public class ControladorCandidato{
     public ArrayList<Candidato> getGovernadores(){
         return governadores;
     }
-    public void incluiCandidato (){
-        Candidato candidato = new Candidato(candidato.getCargo(), candidato.getPartido(), 
+    public void incluiCandidato (Candidato candidato){
+        try {
+            while (candidato.getNumeroCandidato() < 01 || candidato.getNumeroCandidato() > 98 ) {            
+            Candidato candidato = new Candidato(candidato.getCargo(), candidato.getPartido(), 
                 candidato.getNumeroCandidato(), candidato.getNome());
-        if (candidato.getCargo(CARGO.DEPUTADO)) {
-            if(!deputados.contains(candidato)) {
-                deputados.add(candidato);
-                telaCandidato.incluiDeputado();
+        
+            if (candidato.getCargo(CARGO.DEPUTADO)) {
+                if(!deputados.contains(candidato)) {
+                    deputados.add(candidato);
+                    telaCandidato.incluiDeputado();
+                } else {
+                    telaCandidato.candidatoExistente();
+                }
             } else {
+                if(!governadores.contains(candidato)) {
+                governadores.add(candidato);
+                telaCandidato.incluiGovernador();
+                }
                 telaCandidato.candidatoExistente();
             }
-        } else {
-            if(!governadores.contains(candidato)) {
-            governadores.add(candidato);
-           telaCandidato.incluiGovernador();
+            
             }
-            telaCandidato.candidatoExistente();
-        }        
+        } catch (Exception e) {
+            
+        }
+        
+                
     }
     public void excluiCandidato (Candidato candidato){
         candidato.getNome();
