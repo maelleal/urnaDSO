@@ -7,15 +7,15 @@ package br.UFSC.INE5605.urnaDSO.controladores;
 
 import br.UFSC.INE5605.urnaDSO.interfaces.ICandidato;
 import br.UFSC.INE5605.urnaDSO.telas.TelaUrna;
-import br.UFSC.INE5605.ursnaDSO.entidades.CARGO;
-import br.UFSC.INE5605.ursnaDSO.entidades.Candidato;
-import br.UFSC.INE5605.ursnaDSO.entidades.Cidade;
-import br.UFSC.INE5605.ursnaDSO.entidades.Eleitor;
-import br.UFSC.INE5605.ursnaDSO.entidades.PartidoPolitico;
-import br.UFSC.INE5605.ursnaDSO.entidades.SecaoEleitoral;
-import br.UFSC.INE5605.ursnaDSO.entidades.Urna;
-import br.UFSC.INE5605.ursnaDSO.entidades.Voto;
-import br.UFSC.INE5605.ursnaDSO.entidades.ZonaEleitoral;
+import br.UFSC.INE5605.urnaDSO.entidades.CARGO;
+import br.UFSC.INE5605.urnaDSO.entidades.Candidato;
+import br.UFSC.INE5605.urnaDSO.entidades.Cidade;
+import br.UFSC.INE5605.urnaDSO.entidades.Eleitor;
+import br.UFSC.INE5605.urnaDSO.entidades.PartidoPolitico;
+import br.UFSC.INE5605.urnaDSO.entidades.SecaoEleitoral;
+import br.UFSC.INE5605.urnaDSO.entidades.Urna;
+import br.UFSC.INE5605.urnaDSO.entidades.Voto;
+import br.UFSC.INE5605.urnaDSO.entidades.ZonaEleitoral;
 import java.util.ArrayList;
 
 /**

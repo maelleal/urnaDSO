@@ -5,6 +5,12 @@
  */
 package br.UFSC.INE5605.urnaDSO.controladores;
 
+import br.UFSC.INE5605.urnaDSO.entidades.CARGO;
+import br.UFSC.INE5605.urnaDSO.entidades.Candidato;
+import br.UFSC.INE5605.urnaDSO.entidades.Cargo;
+import br.UFSC.INE5605.urnaDSO.entidades.PartidoPolitico;
+import br.UFSC.INE5605.urnaDSO.controladores.ControladorCandidato;
+
 /**
  *
  * @author Ismael
@@ -18,5 +24,6 @@ public class UrnaDSO {
         ControladorPrincipal ctrlPrincipal = new ControladorPrincipal();
         ctrlPrincipal.exibeMenuPrincipal();
     }
+    
     
 }
