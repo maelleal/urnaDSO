@@ -6,6 +6,7 @@
 package br.UFSC.INE5605.urnaDSO.controladores;
 
 import br.UFSC.INE5605.urnaDSO.entidades.PartidoPolitico;
+import br.UFSC.INE5605.urnaDSO.telas.TelaPartido;
 import java.util.ArrayList;
 
 /**
@@ -15,9 +16,11 @@ import java.util.ArrayList;
 public class ControladorPartido {
     
     private ArrayList<PartidoPolitico>partidos;
+    private TelaPartido telaPartido;
     
     public ControladorPartido(){
         this.partidos = new ArrayList();
+        this.telaPartido = new TelaPartido(this);
     }
     
     public ArrayList<PartidoPolitico> getPartidos(){
@@ -28,12 +31,24 @@ public class ControladorPartido {
         PartidoPolitico partidoPolitico = new PartidoPolitico(partido);
         if(!partidos.contains(partidoPolitico)){
             partidos.add(partidoPolitico);
-            System.out.println("Partido Adicionado com Sucesso");
+            telaPartido.adicionaPartido();
             return partidoPolitico;
         } else {
-            System.out.println("Partido Existente");
+            telaPartido.partidoExistente();
             return null;
         }  
+    }
+    public void excluiPartido(String partido){
+        if(partidos.contains(partido)) {
+            partidos.remove(partido);
+            telaPartido.excluiPartido();
+        } else {
+            telaPartido.partidoInexistente();
+        }
+    }
+
+    void incluiPartidoPolitico() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

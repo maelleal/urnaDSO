@@ -7,7 +7,7 @@ package br.UFSC.INE5605.urnaDSO.controladores;
 
 import br.UFSC.INE5605.urnaDSO.entidades.Cidade;
 import br.UFSC.INE5605.urnaDSO.telas.TelaCadastro;
-
+import br.UFSC.INE5605.urnaDSO.controladores.ControladorPartido;
 /**
  *
  * @author rodri
@@ -18,6 +18,7 @@ public class ControladorCadastro {
     private ControladorPrincipal ctrlPrincipal;
     private ControladorEleitor ctrlEleitor;
     private ControladorCandidato ctrlCandidato;
+    private ControladorPartido ctrlPartido;
 
     public ControladorCadastro(ControladorPrincipal ctrlPrincipal) {
         this.ctrlPrincipal = ctrlPrincipal;
@@ -36,6 +37,9 @@ public class ControladorCadastro {
         }
         if (opcaoCadastro == 5) {
            ctrlCandidato.incluiCandidato();
+        }
+        if (opcaoCadastro == 6) {
+           ctrlPartido.incluiPartidoPolitico();
         }
         
     }

@@ -39,26 +39,22 @@ public class ControladorCandidato{
     public ArrayList<Candidato> getGovernadores(){
         return governadores;
     }
-    public Candidato incluiCandidato (){
+    public void incluiCandidato (){
         Candidato candidato = new Candidato(candidato.getCargo(), candidato.getPartido(), 
                 candidato.getNumeroCandidato(), candidato.getNome());
         if (candidato.getCargo(CARGO.DEPUTADO)) {
             if(!deputados.contains(candidato)) {
                 deputados.add(candidato);
                 telaCandidato.incluiDeputado();
-                return candidato;
             } else {
                 telaCandidato.candidatoExistente();
-                return null; 
             }
         } else {
             if(!governadores.contains(candidato)) {
             governadores.add(candidato);
            telaCandidato.incluiGovernador();
-            return candidato;
             }
             telaCandidato.candidatoExistente();
-            return null; 
         }        
     }
     public void excluiCandidato (Candidato candidato){
@@ -83,7 +79,15 @@ public class ControladorCandidato{
         }
         return null;
     }
-
+    public Candidato encontraGovernadorPeloNumero (int numeroCandidato){
+        for (int i = 1; i < governadores.size(); i++) {
+            Candidato candidato = governadores.get(i);
+            if (numeroCandidato == candidato.getNumeroCandidato()) {
+                return candidato;
+            } 
+        }
+        return null;
+    }
     
     
 }
