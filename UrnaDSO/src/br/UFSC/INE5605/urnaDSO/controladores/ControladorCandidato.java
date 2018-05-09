@@ -45,7 +45,7 @@ public class ControladorCandidato{
             Candidato candidato = new Candidato(candidato.getCargo(), candidato.getPartido(), 
                 candidato.getNumeroCandidato(), candidato.getNome());
         
-            if (candidato.getCargo(CARGO.DEPUTADO)) {
+            if (candidato.getCargo(Cargo.DEPUTADO)) { // Corrigir lógica
                 if(!deputados.contains(candidato)) {
                     deputados.add(candidato);
                     telaCandidato.incluiDeputado();

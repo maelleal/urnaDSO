@@ -13,22 +13,33 @@ import java.util.ArrayList;
  */
 public class ZonaEleitoral {
     
-    private int zona;
+    private int numeroZona;
+    private String cidade;
     private ArrayList<SecaoEleitoral>secoes;
 
-    public ZonaEleitoral(int zona) {
-        this.zona = zona;        
+    public ZonaEleitoral(int numeroZona, String cidade) {
+        this.numeroZona = numeroZona;        
         this.secoes = new ArrayList();
+        this.cidade = cidade;
     }
 
-    public int getZona() {
-        return zona;
+    public int getNumeroZona() {
+        return numeroZona;
     }
 
-    public void setZona(int zona) {
-        this.zona = zona;
+    public void setZona(int numeroZona) {
+        this.numeroZona = numeroZona;
     }
-        
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+    
+            
     public ArrayList<SecaoEleitoral> getSecoes(){
         return secoes;
     }

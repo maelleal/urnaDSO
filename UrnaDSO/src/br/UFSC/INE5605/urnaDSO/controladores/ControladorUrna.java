@@ -9,7 +9,6 @@ import br.UFSC.INE5605.urnaDSO.interfaces.ICandidato;
 import br.UFSC.INE5605.urnaDSO.telas.TelaUrna;
 import br.UFSC.INE5605.urnaDSO.entidades.Cargo;
 import br.UFSC.INE5605.urnaDSO.entidades.Candidato;
-import br.UFSC.INE5605.urnaDSO.entidades.Cidade;
 import br.UFSC.INE5605.urnaDSO.entidades.Eleitor;
 import br.UFSC.INE5605.urnaDSO.entidades.PartidoPolitico;
 import br.UFSC.INE5605.urnaDSO.entidades.SecaoEleitoral;

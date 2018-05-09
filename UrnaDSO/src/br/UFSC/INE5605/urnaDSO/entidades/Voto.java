@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package br.UFSC.INE5605.urnaDSO.entidades;
-import br.UFSC.INE5605.urnaDSO.entidades.CARGO;
+import br.UFSC.INE5605.urnaDSO.entidades.Cargo;
 
 /**
  *
@@ -17,7 +17,7 @@ public class Voto {
  
     
 
-    public Voto(Candidato candidato, CARGO cargo) {
+    public Voto(Candidato candidato, Cargo cargo) {
         this.candidato = candidato;
         this.cargo = cargo;
        
@@ -35,11 +35,11 @@ public class Voto {
         this.candidato = candidato;
     }
 
-    public CARGO getCargo() {
+    public Cargo getCargo() {
         return cargo;
     }
 
-    public void setCargo(CARGO cargo) {
+    public void setCargo(Cargo cargo) {
         this.cargo = cargo;
     }
 
