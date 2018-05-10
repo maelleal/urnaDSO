@@ -31,7 +31,7 @@ public class ControladorPrincipal {
     
     public void executaOpcao(int opcao) {
         if (opcao == 1) {
-           ctrlCadastro.iniciarCadastro();
+           ctrlCadastro.iniciaCadastro();
         }
         if (opcao == 2) {
             ctrlUrna.iniciarVotacao();

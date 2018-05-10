@@ -43,7 +43,7 @@ public class ControladorEleitor {
         return a;
     }
     
-    public SecaoEleitoral encontraSecaoPorNumero(int secaoEleitoral){
+    public SecaoEleitoral encontraSecaoPeloNumero(int secaoEleitoral){
         SecaoEleitoral a = null;
         for(SecaoEleitoral s : secoes){
             if(s.getSecao() == secaoEleitoral){
@@ -59,7 +59,7 @@ public class ControladorEleitor {
     }
     
     public void cadastraEleitor(int tituloEleitoral, int secaoEleitoral, String nome, String cidade){
-        SecaoEleitoral secao = this.encontraSecaoPorNumero(secaoEleitoral);
+        SecaoEleitoral secao = this.encontraSecaoPeloNumero(secaoEleitoral);
         
         Eleitor eleitor = new Eleitor(tituloEleitoral, secao, nome, cidade);
     }

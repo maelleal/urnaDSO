@@ -27,7 +27,7 @@ public class ControladorCadastro {
        
     }
     
-    public void iniciarCadastro() {
+    public void iniciaCadastro() {
         telaCadastro.exibeMenuCadastro();
         
     }
