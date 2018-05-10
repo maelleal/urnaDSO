@@ -50,4 +50,9 @@ public class ControladorPartido {
         telaPartido.listaPartidos();
     }
 
+    void incluiPartidoPolitico() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    
 }

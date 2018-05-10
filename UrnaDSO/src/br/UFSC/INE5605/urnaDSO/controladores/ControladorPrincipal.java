@@ -16,10 +16,12 @@ public class ControladorPrincipal {
     
     private TelaPrincipal telaPrincipal;
     private ControladorCadastro ctrlCadastro;
+    private ControladorUrna ctrlUrna;
 
     public ControladorPrincipal() {
         this.telaPrincipal = new TelaPrincipal(this);
         this.ctrlCadastro = new ControladorCadastro(this);
+        this.ctrlUrna = new ControladorUrna();
         
     }
     
@@ -31,21 +33,11 @@ public class ControladorPrincipal {
         if (opcao == 1) {
            ctrlCadastro.iniciarCadastro();
         }
-        
-        
+        if (opcao == 2) {
+            ctrlUrna.iniciarVotacao();
+        }  
     }
 }   
-/*
-    public void iniciarCadastro(){
-        
-    }
-    
-    public void iniciarVotacao() {
-        
-    }
-    
-    /*public void exibeResultado() {
-        
-    }
-}
-*/
+
+
+   

@@ -39,7 +39,10 @@ public class ControladorCandidato{
     public ArrayList<Candidato> getGovernadores(){
         return governadores;
     }
-    public void incluiCandidato (Candidato candidato){
+    public void incluiCandidato (){
+        
+    }
+    /*
         try {
             while (candidato.getNumeroCandidato() < 01 || candidato.getNumeroCandidato() > 98 ) {            
             Candidato candidato = new Candidato(candidato.getCargo(), candidato.getPartido(), 
@@ -61,6 +64,7 @@ public class ControladorCandidato{
             }
             
             }
+            
         } catch (Exception e) {
             
         }
@@ -98,6 +102,6 @@ public class ControladorCandidato{
         }
         return null;
     }
-    
+    */
     
 }

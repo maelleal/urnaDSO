@@ -17,23 +17,26 @@ public class TelaUrna {
     private Scanner teclado;
     private ControladorUrna ctrlUrna;
     
-    public TelaUrna (){
+    public TelaUrna(ControladorUrna ctrlUrna){
+        this.ctrlUrna = ctrlUrna;
         this.teclado = new Scanner(System.in);
-        this.ctrlUrna = new ControladorUrna();
     }
     
-    public void confirmaCandidato (Candidato candidato) {
-        System.out.println("Candidato "+ candidato.getNome());
-        System.out.println("1 - Confirma");
-        System.out.println("2 - Corrige");
+    public void exibeMenuVotacao() {
+        System.out.println("Iniciando Votacao:");
+        System.out.println("");
+        System.out.println("Digite o Numero do Candidato a Governador:");
+        teclado.nextInt();
+        //System.out.println("1 - Confirma");
+        //System.out.println("2 - Corrige");
     
     }
-    
+    /*
     public void votoRealizado() {
         System.out.println("Voto realizado com sucesso!");
     }
     
     public void eleitorJaVotou() {
         System.out.println("Eleitor já votou.");
-    }
+    }*/
 }

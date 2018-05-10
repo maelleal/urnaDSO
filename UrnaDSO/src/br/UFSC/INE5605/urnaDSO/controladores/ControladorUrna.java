@@ -29,7 +29,7 @@ public class ControladorUrna {
     private ArrayList<Urna>urnas;
 
     public ControladorUrna() {
-        this.telaUrna =  new TelaUrna();
+        this.telaUrna = new TelaUrna(this);
         this.listaVotosDeputados = new ArrayList();
         this.listaVotosDeputados = new ArrayList();
         this.urnas = new ArrayList();
@@ -38,10 +38,11 @@ public class ControladorUrna {
     
     
     
-    public void votar (Voto voto){
-        Voto voto = new Voto();
+    public void iniciarVotacao(){
+        telaUrna.exibeMenuVotacao();
+    }
         //verifica se o eleitor já votou
-        Eleitor eleitor = new Eleitor(tituloEleitoral);
+        /*Eleitor eleitor = new Eleitor(tituloEleitoral);
         if(!eleitor.getJaVotou()) {
         
         ControladorUrna.this.incluiVotoGovernador();
@@ -50,6 +51,7 @@ public class ControladorUrna {
         } else {
             telaUrna.eleitorJaVotou();
         }
+
               
     }
     
@@ -84,5 +86,5 @@ public class ControladorUrna {
                    
     }
     
-    
+    */
 }
