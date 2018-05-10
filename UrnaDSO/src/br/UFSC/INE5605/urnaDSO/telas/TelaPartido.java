@@ -7,6 +7,7 @@ package br.UFSC.INE5605.urnaDSO.telas;
 
 import br.UFSC.INE5605.urnaDSO.controladores.ControladorCadastro;
 import br.UFSC.INE5605.urnaDSO.controladores.ControladorPartido;
+import br.UFSC.INE5605.urnaDSO.entidades.PartidoPolitico;
 import java.util.Scanner;
 
 /**
@@ -38,7 +39,11 @@ public class TelaPartido {
     public void partidoTeste() {
         System.out.println("Partido Inexistente");
     }
-    
+    public void listaPartidos() {
+        for (PartidoPolitico partido : ctrlPartido.getPartidos()) {
+            System.out.println("Partido: "+ partido.getPartido());
+        }
+    }
     
     
     

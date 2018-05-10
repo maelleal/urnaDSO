@@ -14,32 +14,31 @@ import java.util.ArrayList;
  * @author Ivo Guilherme
  */
 public class ControladorPartido {
-    
-    private ArrayList<PartidoPolitico>partidos;
+
+    private ArrayList<PartidoPolitico> partidos;
     private TelaPartido telaPartido;
-    
-    public ControladorPartido(){
+
+    public ControladorPartido() {
         this.partidos = new ArrayList();
         this.telaPartido = new TelaPartido(this);
     }
-    
-    public ArrayList<PartidoPolitico> getPartidos(){
+
+    public ArrayList<PartidoPolitico> getPartidos() {
         return partidos;
     }
-    
-    public PartidoPolitico incluiPartidoPolitico (String partido){
+
+    public void incluiPartidoPolitico(String partido) {
         PartidoPolitico partidoPolitico = new PartidoPolitico(partido);
-        if(!partidos.contains(partidoPolitico)){
+        if (!partidos.contains(partidoPolitico)) {
             partidos.add(partidoPolitico);
             telaPartido.adicionaPartido();
-            return partidoPolitico;
         } else {
             telaPartido.partidoExistente();
-            return null;
-        }  
+        }
     }
-    public void excluiPartido(String partido){
-        if(partidos.contains(partido)) {
+
+    public void excluiPartido(String partido) {
+        if (partidos.contains(partido)) {
             partidos.remove(partido);
             telaPartido.excluiPartido();
         } else {
@@ -47,8 +46,8 @@ public class ControladorPartido {
         }
     }
 
-    void incluiPartidoPolitico() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void listaPartidos() {
+        telaPartido.listaPartidos();
     }
-    
+
 }
