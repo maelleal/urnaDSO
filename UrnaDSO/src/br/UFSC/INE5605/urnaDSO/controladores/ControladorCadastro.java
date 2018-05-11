@@ -38,6 +38,7 @@ public class ControladorCadastro {
         ControladorEleitor ctrlEleitor = new ControladorEleitor(this);
         ControladorCandidato ctrlCandidato = new ControladorCandidato(this);
         ControladorPartido ctrlPartido = new ControladorPartido();
+        ControladorPrincipal ctrlPrincipal = new ControladorPrincipal();
         if (opcaoCadastro == 3) {
             ctrlEleitor.incluiSecao();
         }
@@ -49,6 +50,9 @@ public class ControladorCadastro {
         }
         if (opcaoCadastro == 6) {
            ctrlPartido.exibeMenuPartido();
+        }
+        if (opcaoCadastro == 7) {
+        ctrlPrincipal.inicializa();
         }
         
     }

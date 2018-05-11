@@ -15,6 +15,8 @@ import java.util.Scanner;
  * @author ismael
  */
 public class TelaPartido {
+    private TelaCadastro telaCadastro;
+    private ControladorCadastro ctrlCadastro;
     private ControladorPartido ctrlPartido;
     private Scanner teclado;
 
@@ -47,7 +49,7 @@ public class TelaPartido {
    
 
     public void exibeMenuPartido() {
-        
+        TelaCadastro telaCadastro = new TelaCadastro(ctrlCadastro);
         System.out.println("==== Cadastro de Partido ===="); 
         System.out.println(""); 
         System.out.println("Preencha os dados a seguir"); 
@@ -56,7 +58,7 @@ public class TelaPartido {
         String nome = teclado.next();
         ctrlPartido.incluiPartido(nome);
         this.listaPartidos();
-        
+        telaCadastro.exibeMenuCadastro();
     }
 
     
