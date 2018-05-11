@@ -14,14 +14,13 @@ import java.util.ArrayList;
 public class SecaoEleitoral {
     
     private int secao;
-    private Urna urna;
     private ArrayList<Eleitor> eleitores;
+    private String cidade;
 
-    public SecaoEleitoral(int secao, Urna urna) {
+    public SecaoEleitoral(int secao, String cidade) {
         this.secao = secao;
-        this.urna = new Urna(this);
         this.eleitores = new ArrayList();
-        
+        this.cidade = cidade;
     }
 
     public int getSecao() {
@@ -30,14 +29,6 @@ public class SecaoEleitoral {
 
     public void setSecao(int secao) {
         this.secao = secao;
-    }
-
-    public Urna getUrna() {
-        return urna;
-    }
-
-    public void setUrna(Urna urna) {
-        this.urna = urna;
     }
 
     public ArrayList<Eleitor> getEleitores() {

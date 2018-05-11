@@ -27,32 +27,22 @@ public class ControladorPartido {
         return partidos;
     }
 
-    public void incluiPartidoPolitico(String partido) {
-        PartidoPolitico partidoPolitico = new PartidoPolitico(partido);
-        if (!partidos.contains(partidoPolitico)) {
-            partidos.add(partidoPolitico);
-            telaPartido.adicionaPartido();
-        } else {
-            telaPartido.partidoExistente();
-        }
-    }
-
-    public void excluiPartidoPolitico(String partido) {
-        if (partidos.contains(partido)) {
-            partidos.remove(partido);
-            telaPartido.excluiPartido();
-        } else {
-            telaPartido.partidoInexistente();
-        }
-    }
-
     public void listaPartidos() {
         telaPartido.listaPartidos();
+    }
+    
+    public void exibeMenuPartido(){
+        telaPartido.exibeMenuPartido();
     }
 
     void incluiPartidoPolitico() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    public void incluiPartido(String nomePartido) {
+        PartidoPolitico partido = new PartidoPolitico(nomePartido);
+        partidos.add(partido);
+        
     
+    }
 }

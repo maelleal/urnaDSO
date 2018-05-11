@@ -12,11 +12,7 @@ import br.UFSC.INE5605.urnaDSO.entidades.Eleitor;
  * @author rodri
  */
 public interface IEleitor {
-    
-    public void incluiEleitor(Eleitor e);
-    
-    public void excluiEleitor(Eleitor e);
-    
+     
     public void exibeEleitores();   
     
     

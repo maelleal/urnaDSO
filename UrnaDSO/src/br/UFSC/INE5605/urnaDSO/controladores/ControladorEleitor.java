@@ -62,6 +62,17 @@ public class ControladorEleitor {
         SecaoEleitoral secao = this.encontraSecaoPeloNumero(secaoEleitoral);
         
         Eleitor eleitor = new Eleitor(tituloEleitoral, secao, nome, cidade);
+        eleitores.add(eleitor);
+        secao.getEleitores().add(eleitor);
+    }
+    
+    public void incluiSecao(){
+        telaEleitor.incluirSecao();
+    }
+    
+    public void cadastraSecao(int numeroSecao, String cidade){
+        SecaoEleitoral secao = new SecaoEleitoral(numeroSecao, cidade);
+        secoes.add(secao);
     }
     
     

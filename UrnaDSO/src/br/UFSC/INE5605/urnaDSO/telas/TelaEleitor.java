@@ -41,15 +41,22 @@ public class TelaEleitor {
         
         ctrlEleitor.cadastraEleitor(tituloEleitoral, secaoEleitoral, nome, cidade);
     }
-
-  
-    public void excluiEleitor(Eleitor e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
  
     public void exibeEleitores() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        for(Eleitor e : ctrlEleitor.getEleitores()){
+            System.out.println("Eleitor: "+e.getNome());
+        }
+    }
+
+    public void incluirSecao() {
+        System.out.println("==== Cadastro de Seção ====");
+        System.out.println("");
+        System.out.println("Digite o numero da secao:");
+        int numeroSecao = teclado.nextInt();
+        System.out.println("Digite o nome da cidade: ");
+        String cidade = teclado.next();
+        
+        ctrlEleitor.cadastraSecao(numeroSecao, cidade);
     }
     
     

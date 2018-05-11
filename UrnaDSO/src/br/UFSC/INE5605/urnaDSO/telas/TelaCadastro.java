@@ -26,6 +26,7 @@ public class TelaCadastro {
     public void exibeMenuCadastro(){
        System.out.println("---- Cadastro da Urna ----");
        System.out.println("");
+       System.out.println("3 - Cadastra Secao");
        System.out.println("4 - Cadastra Eleitores");
        System.out.println("5 - Cadastra Candidatos");
        System.out.println("6 - Cadastra Partido");
