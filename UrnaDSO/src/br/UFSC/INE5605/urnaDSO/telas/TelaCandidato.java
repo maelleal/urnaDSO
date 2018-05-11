@@ -25,11 +25,11 @@ public class TelaCandidato {
     
     public void exibeCadastroCandidato(){
         System.out.println("digite o nome");
-                String nome = cadastroCandidato.next();
+                String nome = cadastroCandidato.nextLine();
                 System.out.println("digite o cargo ");
-                String cargo = cadastroCandidato.next();
+                String cargo = cadastroCandidato.nextLine();
                 System.out.println("digite o partido");
-                String partido = cadastroCandidato.next();
+                String partido = cadastroCandidato.nextLine();
                 System.out.println("digite o numero do candidato");
                 int numeroCandidato = cadastroCandidato.nextInt();
                 ctrlCandidato.cadastraCandidato(nome, cargo, partido, numeroCandidato);

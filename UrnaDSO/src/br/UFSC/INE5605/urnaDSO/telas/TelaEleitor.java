@@ -31,9 +31,9 @@ public class TelaEleitor {
         System.out.println("Preencha os dados a seguir"); 
         System.out.println(""); 
         System.out.println("Nome do eleitor: ");
-        String nome = teclado.next();
+        String nome = teclado.nextLine();
         System.out.println("Cidade: ");
-        String cidade = teclado.next();
+        String cidade = teclado.nextLine();
         System.out.println("Numero do titulo de eleitor: ");
         int tituloEleitoral = teclado.nextInt();
         System.out.println("Numero da secao: ");

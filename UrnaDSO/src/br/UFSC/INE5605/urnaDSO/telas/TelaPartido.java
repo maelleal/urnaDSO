@@ -55,7 +55,7 @@ public class TelaPartido {
         System.out.println("Preencha os dados a seguir"); 
         System.out.println(""); 
         System.out.println("Nome do Partido: ");
-        String nome = teclado.next();
+        String nome = teclado.nextLine();
         ctrlPartido.incluiPartido(nome);
         this.listaPartidos();
         telaCadastro.exibeMenuCadastro();
