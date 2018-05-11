@@ -27,6 +27,7 @@ public class ControladorUrna {
     private ArrayList<Voto>listaVotosDeputados;
     private ArrayList<Voto>listaVotosGovernadores;
     private ArrayList<Urna>urnas;
+    private int votoGov;
 
     public ControladorUrna() {
         this.telaUrna = new TelaUrna(this);
@@ -40,6 +41,10 @@ public class ControladorUrna {
     
     public void iniciarVotacao(){
         telaUrna.exibeMenuVotacao();
+    }
+    
+    public void resultadoGov(){
+        
     }
         //verifica se o eleitor já votou
         /*Eleitor eleitor = new Eleitor(tituloEleitoral);

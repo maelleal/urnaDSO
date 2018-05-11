@@ -14,19 +14,19 @@ import br.UFSC.INE5605.urnaDSO.entidades.Candidato;
  */
 public class TelaUrna {
     
-    private Scanner teclado;
+    private Scanner votoGov;
     private ControladorUrna ctrlUrna;
     
     public TelaUrna(ControladorUrna ctrlUrna){
         this.ctrlUrna = ctrlUrna;
-        this.teclado = new Scanner(System.in);
+        this.votoGov = new Scanner(System.in);
     }
     
     public void exibeMenuVotacao() {
         System.out.println("Iniciando Votacao:");
         System.out.println("");
         System.out.println("Digite o Numero do Candidato a Governador:");
-        teclado.nextInt();
+        votoGov.nextInt();
         //System.out.println("1 - Confirma");
         //System.out.println("2 - Corrige");
     

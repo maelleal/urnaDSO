@@ -14,13 +14,15 @@ import br.UFSC.INE5605.urnaDSO.telas.TelaCandidato;
  * @author Ismael
  */
 public class Candidato extends Pessoa {
+
     
     
-    private Cargo cargo;
-    private PartidoPolitico partido;
+    
+    private String cargo;
+    private String partido;
     private int numeroCandidato;
 
-    public Candidato(Cargo cargo, PartidoPolitico partido, int numeroCandidato, String nome) {
+    public Candidato(String nome, String cargo, String partido, int numeroCandidato) {
         super(nome);
         this.cargo = cargo;
         this.partido = partido;
@@ -28,19 +30,19 @@ public class Candidato extends Pessoa {
     }
 
 
-    public Cargo getCargo() {
+    public String getCargo() {
         return cargo;
     }
 
-    public void setCargo(Cargo cargo) {
+    public void setCargo(String cargo) {
         this.cargo = cargo;
     }
 
-    public PartidoPolitico getPartido() {
+    public String getPartido() {
         return partido;
     }
 
-    public void setPartido(PartidoPolitico partido) {
+    public void setPartido(String partido) {
         this.partido = partido;
     }
 

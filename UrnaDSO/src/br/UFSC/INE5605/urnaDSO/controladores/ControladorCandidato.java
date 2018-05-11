@@ -19,28 +19,39 @@ import java.util.ArrayList;
  */
 public class ControladorCandidato{
     private TelaCandidato telaCandidato;
-    private ArrayList<Candidato>deputados;
-    private ArrayList<Candidato>governadores;
+    private ArrayList<Candidato>candidatos;
+    //private ArrayList<Candidato>governadores;
     private ControladorCadastro ctrlCadastro;
+    private ControladorPrincipal ctrlPrincipal;
+    
+   
+   
+  
    
 
     public ControladorCandidato(ControladorCadastro ctrlCadastro) {
-        this.deputados = new ArrayList();
-        this.governadores = new ArrayList();
+        this.ctrlPrincipal = ctrlPrincipal;
+        this.candidatos = new ArrayList();
+       // this.governadores = new ArrayList();
         this.telaCandidato = new TelaCandidato(this);
         this.ctrlCadastro = ctrlCadastro;
     
     }
     
-    public ArrayList<Candidato> getDeputados(){
+    /*public ArrayList<Candidato> getDeputados(){
         return deputados;
     }
     
     public ArrayList<Candidato> getGovernadores(){
         return governadores;
-    }
-    public void incluiCandidato (){
+    }*/
+    public void incluiCandidato(){
+        telaCandidato.exibeCadastroCandidato();
         
+    }
+    
+    public void cadastraCandidato(String nome, String cargo, String partido, int numeroCandidato) {
+       Candidato candidato = new Candidato(nome, cargo, partido, numeroCandidato);
     }
     /*
         try {

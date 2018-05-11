@@ -24,15 +24,23 @@ public class ControladorCadastro {
     public ControladorCadastro(ControladorPrincipal ctrlPrincipal) {
         this.ctrlPrincipal = ctrlPrincipal;
         this.telaCadastro = new TelaCadastro(this);
-       
+    
+      
+         
     }
     
     public void iniciaCadastro() {
         telaCadastro.exibeMenuCadastro();
         
     }
+    public void inicializa() {
+        
+    }
     
     public void executaOpcaoCadastro(int opcaoCadastro){
+        ControladorEleitor ctrlEleitor = new ControladorEleitor(this);
+        ControladorCandidato ctrlCandidato = new ControladorCandidato(this);
+        ControladorPartido ctrlPartido = new ControladorPartido();
         if (opcaoCadastro == 4) {
            ctrlEleitor.exibeMenuEleitores();
         }
