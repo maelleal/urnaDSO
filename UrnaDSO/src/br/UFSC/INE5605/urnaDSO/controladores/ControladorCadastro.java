@@ -57,9 +57,7 @@ public class ControladorCadastro {
         if (opcaoCadastro == 0) {
             ctrlPrincipal.mensagemFim();
         }
-        if (opcaoCadastro > 0) {
-            telaCadastro.opcaoInvalida();
-        }
+        
         
     }
   

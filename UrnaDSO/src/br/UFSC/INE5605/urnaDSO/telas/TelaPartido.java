@@ -59,9 +59,7 @@ public class TelaPartido {
         ctrlPartido.incluiPartido(nome);
         this.adicionaPartido();
         this.listaPartidos();
-        System.out.println(""); 
-        System.out.println("ENTER - para adicionar outro partido"); 
-        teclado.nextLine();
+        
                 
     }
 
