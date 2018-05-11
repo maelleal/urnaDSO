@@ -26,18 +26,20 @@ public class ControladorPartido {
     public ArrayList<PartidoPolitico> getPartidos() {
         return partidos;
     }
-
-    public void listaPartidos() {
-        telaPartido.listaPartidos();
-    }
     
+    public PartidoPolitico encontraPartidoPeloNome(String nome){
+        PartidoPolitico a = null;
+        for(PartidoPolitico e : partidos){
+            if(e.getPartido() == nome){
+                a = e;
+            }      
+        }
+        return a;
+    }
     public void exibeMenuPartido(){
         telaPartido.exibeMenuPartido();
     }
-
-    void incluiPartidoPolitico() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 
     public void incluiPartido(String nomePartido) {
         PartidoPolitico partido = new PartidoPolitico(nomePartido);
@@ -45,4 +47,6 @@ public class ControladorPartido {
         
     
     }
+    
+    
 }

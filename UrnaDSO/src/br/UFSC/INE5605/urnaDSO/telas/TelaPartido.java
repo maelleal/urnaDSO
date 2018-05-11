@@ -44,8 +44,10 @@ public class TelaPartido {
             System.out.println("Partido: "+ partido.getPartido());
         }
     }
-    
+   
+
     public void exibeMenuPartido() {
+        
         System.out.println("==== Cadastro de Partido ===="); 
         System.out.println(""); 
         System.out.println("Preencha os dados a seguir"); 
@@ -54,13 +56,8 @@ public class TelaPartido {
         String nome = teclado.next();
         ctrlPartido.incluiPartido(nome);
         this.listaPartidos();
+        
     }
-    
-    
-    
-    
-    
-    
-    
+
     
 }

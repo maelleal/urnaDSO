@@ -24,9 +24,6 @@ public class ControladorCadastro {
     public ControladorCadastro(ControladorPrincipal ctrlPrincipal) {
         this.ctrlPrincipal = ctrlPrincipal;
         this.telaCadastro = new TelaCadastro(this);
-    
-      
-         
     }
     
     public void iniciaCadastro() {
@@ -51,7 +48,7 @@ public class ControladorCadastro {
            ctrlCandidato.incluiCandidato();
         }
         if (opcaoCadastro == 6) {
-           ctrlPartido.incluiPartidoPolitico();
+           ctrlPartido.exibeMenuPartido();
         }
         
     }
