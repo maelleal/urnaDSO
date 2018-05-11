@@ -19,8 +19,8 @@ import java.util.ArrayList;
  */
 public class ControladorCandidato{
     private TelaCandidato telaCandidato;
-    private ArrayList<Candidato>candidatos;
-    //private ArrayList<Candidato>governadores;
+    private ArrayList<Candidato>deputados;
+    private ArrayList<Candidato>governadores;
     private ControladorCadastro ctrlCadastro;
     private ControladorPrincipal ctrlPrincipal;
     
@@ -31,27 +31,33 @@ public class ControladorCandidato{
 
     public ControladorCandidato(ControladorCadastro ctrlCadastro) {
         this.ctrlPrincipal = ctrlPrincipal;
-        this.candidatos = new ArrayList();
-       // this.governadores = new ArrayList();
+        this.deputados = new ArrayList();
+        this.governadores = new ArrayList();
         this.telaCandidato = new TelaCandidato(this);
         this.ctrlCadastro = ctrlCadastro;
     
     }
     
-    /*public ArrayList<Candidato> getDeputados(){
+    public ArrayList<Candidato> getDeputados(){
         return deputados;
     }
     
     public ArrayList<Candidato> getGovernadores(){
         return governadores;
-    }*/
+    }
     public void incluiCandidato(){
         telaCandidato.exibeCadastroCandidato();
         
     }
     
     public void cadastraCandidato(String nome, String cargo, String partido, int numeroCandidato) {
-       Candidato candidato = new Candidato(nome, cargo, partido, numeroCandidato);
+       if(cargo.equals("deputado")){
+           Candidato deputado = new Candidato(nome, cargo, partido, numeroCandidato);
+           deputados.add(deputado);
+       }else{
+           Candidato governador = new Candidato(nome, cargo, partido, numeroCandidato);
+           governadores.add(governador);
+       }
     }
     /*
         try {
