@@ -26,6 +26,8 @@ public class TelaCadastro {
     public void exibeMenuCadastro(){
        System.out.println("---- Cadastro da Urna ----");
        System.out.println("");
+       System.out.println("0 - Sair");
+       
        System.out.println("3 - Cadastra Secao");
        System.out.println("4 - Cadastra Eleitores");
        System.out.println("5 - Cadastra Candidatos");
@@ -42,6 +44,30 @@ public class TelaCadastro {
     
     }
     
+    public void opcaoInvalida(){
+        System.out.println("Escolha uma das opções validas!");
+    }
+    /*
+    public int testaOpcao() {
+        int numero = 0;
+        boolean testa = false;
+                
+        do {
+            try {
+                numero = teclado.nextInt();
+                if (numero < 7) {
+                    testa = true;
+                } else {
+                    this.opcaoInvalida();
+                }
+            } catch (Exception e) {
+                this.opcaoInvalida();
+            }
+            teclado.nextLine();
+        } while (!testa);
+        return numero;
+    }
+    */
     
     
 }
