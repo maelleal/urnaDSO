@@ -43,7 +43,7 @@ public class TelaEleitor {
     }
 
   
-    public void excluirEleitor(Eleitor e) {
+    public void excluiEleitor(Eleitor e) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

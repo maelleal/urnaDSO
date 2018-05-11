@@ -15,7 +15,7 @@ public interface IEleitor {
     
     public void incluiEleitor(Eleitor e);
     
-    public void excluirEleitor(Eleitor e);
+    public void excluiEleitor(Eleitor e);
     
     public void exibeEleitores();   
     

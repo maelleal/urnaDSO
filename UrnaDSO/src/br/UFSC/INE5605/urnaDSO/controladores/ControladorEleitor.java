@@ -33,7 +33,7 @@ public class ControladorEleitor {
     
     //public void editaEleitor(Eleitor e)
     
-    public Eleitor encontraEleitorPorTitulo(int titulo){
+    public Eleitor encontraEleitorPeloTitulo(int titulo){
         Eleitor a = null;
         for(Eleitor e : eleitores){
             if(e.getTituloEleitoral() == titulo){
@@ -73,8 +73,8 @@ public class ControladorEleitor {
         this.eleitores.remove(e);//TODO tratar exceções
     }
     
-    public void exibeEleitores(){
-        
+    public ArrayList<Eleitor> getEleitores(){
+        return eleitores;
     }
 
     

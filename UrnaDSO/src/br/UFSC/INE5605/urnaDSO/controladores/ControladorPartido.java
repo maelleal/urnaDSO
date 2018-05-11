@@ -37,7 +37,7 @@ public class ControladorPartido {
         }
     }
 
-    public void excluiPartido(String partido) {
+    public void excluiPartidoPolitico(String partido) {
         if (partidos.contains(partido)) {
             partidos.remove(partido);
             telaPartido.excluiPartido();
