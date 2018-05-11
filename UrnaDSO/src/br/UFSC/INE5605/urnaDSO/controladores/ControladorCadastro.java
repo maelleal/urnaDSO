@@ -52,7 +52,10 @@ public class ControladorCadastro {
            ctrlPartido.exibeMenuPartido();
         }
         if (opcaoCadastro == 7) {
-        ctrlPrincipal.inicializa();
+            ctrlPrincipal.inicializa();
+        }
+        if (opcaoCadastro == 0) {
+            ctrlPrincipal.mensagemFim();
         }
         
     }

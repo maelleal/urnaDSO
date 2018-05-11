@@ -25,6 +25,7 @@ public class TelaPrincipal {
     public void exibeMenuPrincipal() {
         System.out.println("==== URNA ELETRONICA ====");
         System.out.println("");
+        System.out.println("0 - Sair");
         System.out.println("1 - Cadastro");
         System.out.println("2 - Votacao");
         System.out.println("3 - Resultado");
@@ -35,6 +36,14 @@ public class TelaPrincipal {
         
         ctrlPrincipal.executaOpcao(opcao);
     }
+    public void mensagemFim() {
+        System.out.println("Encerrando Sistema...");
+        System.out.println("");
+        System.out.println("Sistema Encerrado.");
+        
+        System.exit(0);
+    }
+    
 }
         /*
         int var = teclado.nextInt();

@@ -36,7 +36,14 @@ public class ControladorPrincipal {
         }
         if (opcao == 2) {
             ctrlUrna.iniciarVotacao();
-        }  
+        } 
+        if (opcao == 0) {
+            this.mensagemFim();
+        }
+    }
+
+    public void mensagemFim() {
+        telaPrincipal.mensagemFim();
     }
 }   
 

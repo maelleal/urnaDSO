@@ -45,6 +45,7 @@ public class TelaCandidato {
                
     }
     
+    
     public void incluiDeputado () {
         System.out.println("Candidato a Deputado Adcicionado com Sucesso");
     }
