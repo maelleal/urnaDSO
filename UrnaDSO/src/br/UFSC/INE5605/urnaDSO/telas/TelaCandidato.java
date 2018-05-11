@@ -40,10 +40,11 @@ public class TelaCandidato {
         System.out.println("digite o numero do candidato");
         int numeroCandidato = cadastroCandidato.nextInt();
         ctrlCandidato.cadastraCandidato(nome, cargo, partido, numeroCandidato);
+        System.out.println("Candidato cadastrado com sucesso.");
         telaCadastro.exibeMenuCadastro();
                
     }
-    /*
+    
     public void incluiDeputado () {
         System.out.println("Candidato a Deputado Adcicionado com Sucesso");
     }
@@ -67,5 +68,5 @@ public class TelaCandidato {
         System.out.println("Candidato: "+ candidato.getNome());
     }
     
-    */
+  
 }

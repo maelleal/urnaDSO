@@ -43,7 +43,7 @@ public class TelaPartido {
     }
     public void listaPartidos() {
         for (PartidoPolitico partido : ctrlPartido.getPartidos()) {
-            System.out.println("Partido: "+ partido.getPartido());
+            System.out.println("Partidos Cadastrados: "+ partido.getPartido());
         }
     }
    
@@ -57,6 +57,7 @@ public class TelaPartido {
         System.out.println("Nome do Partido: ");
         String nome = teclado.nextLine();
         ctrlPartido.incluiPartido(nome);
+        this.adicionaPartido();
         this.listaPartidos();
         telaCadastro.exibeMenuCadastro();
     }
